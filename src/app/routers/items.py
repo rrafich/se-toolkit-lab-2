@@ -36,7 +36,7 @@ def get_course(course_id: str):
     if course is not None:
         return course
 
-    raise HTTPException(status_code=404, detail="Course not found")
+    raise HTTPException(status_code=400, detail="Course not found")
 
 
 @router.get("/course/{course_id}/lab/{lab_id}", response_model=Lab)
